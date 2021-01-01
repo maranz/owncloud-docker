@@ -17,7 +17,8 @@ Example
 ./upgrade.sh 10.6
 ```
 
-Manual mode
+Manual mode 
+
 [documentation](documentation/upgrade.md)
 
 
