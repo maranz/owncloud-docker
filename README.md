@@ -36,8 +36,12 @@ location /owncloud/ {
     add_header		        Front-End-Https   on;
     proxy_set_header        X-Frame-Options   SAMEORIGIN;
     
-    proxy_pass		http://192.168.178.8:9260/;
+    proxy_pass		        http://192.168.178.8:9260/;
 }
 ```
 
 ## OCC
+
+```
+docker-compose exec owncloud occ files:scan --all
+```
