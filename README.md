@@ -5,19 +5,20 @@
 
 ## Upgrading
 
-**Script**
+Script
 
 ```
 ./upgrade.sh <Versione>
 ```
 
-**Example**
+Example
 
 ```
 ./upgrade.sh 10.6
 ```
 
-Manual
+Manual mode
+[documentation](documentation/upgrade.md)
 
 
 
