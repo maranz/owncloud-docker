@@ -42,6 +42,8 @@ location /owncloud/ {
 
 ## OCC
 
+refresh files
+
 ```
 docker-compose exec owncloud occ files:scan --all
 ```
