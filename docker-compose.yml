@@ -78,3 +78,15 @@ services:
     volumes:
       - redis:/var/lib/redis
 
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: owncloud_phpadmin
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - 9263:80
+    environment:
+      MYSQL_USERNAME: ${MYSQL_USERE}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_PORT_3306_TCP_ADDR: db
