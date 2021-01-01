@@ -1,34 +1,34 @@
-* Set maintenance owncloud
+**Set maintenance owncloud**
 ```
 docker-compose exec owncloud occ maintenance:mode --on
 ```
 
-* Backup database
+**Backup database**
 ```
 docker-compose exec db backup
 ```
 
-* Shutdown 
+**Shutdown** 
 ```
 docker-compose down
 ```
 
-* Set new version
+**Set new version**
 ```
 sed -i 's/^OWNCLOUD_VERSION=.*$/OWNCLOUD_VERSION=<newVersion>/' .env
 ```
 
-* check file .env
+**check file .env**
 ```
 cat .env
 ```
 
-* Start
+**Start**
 ```
 docker-compose up -d
 ```
 
-* check start
+**check start**
 ```
 docker-compose logs --timestamp owncloud
 ```
