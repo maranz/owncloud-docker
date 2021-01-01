@@ -1,8 +1,6 @@
 version: '2.1'
 
 volumes:
-  files:
-    driver: local
   mysql:
     driver: local
   backup:
@@ -38,7 +36,9 @@ services:
       timeout: 10s
       retries: 5
     volumes:
-      - files:/mnt/data
+      - /media/hd2/docker.container/owncloud/document:/mnt/data
+      - /media/hd2/docker.container/owncloud/config:/mnt/data/config
+      - /media/hd2/docker.container/owncloud/apps:/mnt/data/apps
 
   db:
     container_name: owncloud_db
