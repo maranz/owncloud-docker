@@ -5,40 +5,21 @@
 
 ## Upgrading
 
-* Set maintenance owncloud
+**Script**
+
 ```
-docker-compose exec owncloud occ maintenance:mode --on
+./upgrade.sh <Versione>
 ```
 
-* Backup database
+**Example**
+
 ```
-docker-compose exec db backup
+./upgrade.sh 10.6
 ```
 
-* Shutdown 
-```
-docker-compose down
-```
+Manual
 
-* Set new version
-```
-sed -i 's/^OWNCLOUD_VERSION=.*$/OWNCLOUD_VERSION=<newVersion>/' /compose/*/.env
-```
 
-* check file .env
-```
-cat .env
-```
-
-* Start
-```
-docker-compose up -d
-```
-
-* check start
-```
-docker-compose logs --timestamp owncloud
-```
 
 ## NGINX
 
