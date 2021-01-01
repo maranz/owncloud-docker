@@ -18,7 +18,7 @@ docker-compose down
 sed -i 's/^OWNCLOUD_VERSION=.*$/OWNCLOUD_VERSION=<newVersion>/' .env
 ```
 
-**check file .env**
+**Check file .env**
 ```
 cat .env
 ```
@@ -28,7 +28,7 @@ cat .env
 docker-compose up -d
 ```
 
-**check start**
+**Check start**
 ```
 docker-compose logs --timestamp owncloud
 ```
