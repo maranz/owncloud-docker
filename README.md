@@ -47,3 +47,17 @@ refresh files
 ```
 docker-compose exec owncloud occ files:scan --all
 ```
+
+## MYSQL
+
+backup
+
+```
+docker-compose exec db backup
+```
+
+restore
+
+```
+docker-compose exec db restore <path file backup>
+```
