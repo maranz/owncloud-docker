@@ -1,10 +1,6 @@
 version: '2.1'
 
 volumes:
-  mysql:
-    driver: local
-  backup:
-    driver: local
   redis:
     driver: local
 
@@ -59,8 +55,8 @@ services:
       timeout: 10s
       retries: 5
     volumes:
-      - mysql:/var/lib/mysql
-      - backup:/var/lib/backup
+      - /media/hd2/docker.container/owncloud/mysql:/var/lib/mysql
+      - /media/hd2/docker.container/owncloud/backup:/var/lib/backup
 
   redis:
     container_name: owncloud_redis
