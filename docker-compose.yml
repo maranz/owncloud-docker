@@ -12,6 +12,7 @@ volumes:
 
 services:
   owncloud:
+    container_name: owncloud
     image: owncloud/server:${OWNCLOUD_VERSION}
     restart: always
     ports:
@@ -40,8 +41,11 @@ services:
       - files:/mnt/data
 
   db:
+    container_name: owncloud_db
     image: webhippie/mariadb:latest
     restart: always
+    ports:
+      - ${MYSQL_PORT}:3306
     environment:
       - MARIADB_ROOT_PASSWORD=owncloud
       - MARIADB_USERNAME=owncloud
@@ -59,8 +63,11 @@ services:
       - backup:/var/lib/backup
 
   redis:
+    container_name: owncloud_redis
     image: webhippie/redis:latest
     restart: always
+    ports:
+      - ${REDIS_PORT}:3306
     environment:
       - REDIS_DATABASES=1
     healthcheck:
