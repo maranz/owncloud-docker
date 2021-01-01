@@ -1,9 +1,5 @@
 version: '2.1'
 
-volumes:
-  redis:
-    driver: local
-
 services:
   owncloud:
     container_name: owncloud
@@ -72,7 +68,7 @@ services:
       timeout: 10s
       retries: 5
     volumes:
-      - redis:/var/lib/redis
+      - /media/hd2/docker.container/owncloud/driver:/var/lib/redis
 
   phpmyadmin:
     image: phpmyadmin:latest
