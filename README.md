@@ -19,7 +19,7 @@ Example
 
 Manual mode 
 
-[documentation](documentation/upgrade.md)
+[documentation](doc/upgrade.md)
 
 
 
