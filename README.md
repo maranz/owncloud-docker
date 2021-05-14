@@ -61,3 +61,9 @@ restore
 ```
 docker-compose exec db restore <path file backup>
 ```
+
+Enter on VM
+
+```
+docker exec -it -u www-data owncloud bash
+```
